@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React, { Component } from 'react';\nexport default class RootError extends Component {\n  render() {\n    return 'Error!';\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
