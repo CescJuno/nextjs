@@ -263,7 +263,7 @@ const $axios = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
   headers: {
     Pragma: "no-cache"
   },
-  baseURL:  false ? undefined : "http://localhost:8081",
+  baseURL:  true ? "http://localhost:8081" : undefined,
   withCredentials: true
 });
 /* harmony default export */ __webpack_exports__["a"] = ($axios);
@@ -302,7 +302,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const getTest = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAsyncThunk"])(`test/getTest`, async query => {
-  const response = await _plugins_axios__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].get( false ? undefined : query !== undefined ? '/cart?page=' + query.page : '/cart');
+  const response = await _plugins_axios__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].get( true ? `/carts/index.json?q=` + query : undefined);
   return response.data;
 });
 const slice = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createSlice"])({

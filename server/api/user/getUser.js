@@ -1,7 +1,7 @@
   
 export default async (req, res) => {
     const userData = {
-      jaeseo: 'https://github.com/JaeSeoKim'
+      joonho: 'https://github.com/CescJuno'
     }
     setTimeout(() => {
       if (userData[req.params.id] === undefined) {

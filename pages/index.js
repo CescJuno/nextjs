@@ -49,7 +49,7 @@ const Main = ({ number }) => {
 export async function getServerSideProps(context) {
   return {
     props: {
-      number: context.req.session.num || 0,
+      number: 0//context.req.session.num === undefined? 0 : context.req.session.num,
     },
   };
 }
