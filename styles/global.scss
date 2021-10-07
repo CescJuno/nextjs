@@ -1,0 +1,447 @@
+@import "./mixin";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'MalgunGothic', sans-serif;
+}
+html {
+    -ms-overflow-style: none;
+    /*-ms-autohiding-scrollbar;*/
+    scrollbar-width: none;
+    /* Firefox 64 */
+}
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    margin: 0;
+    background-color: $bg-color;
+    font-size: $font-size1; 
+}
+ul {
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+}
+li {
+    list-style-type: none;
+}
+input:focus, textarea:focus, select:focus {
+    outline-offset: 0px !important;
+    outline: none !important;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button {
+    cursor: pointer;
+    border: 0;
+    background: inherit;
+    outline: none;
+}
+
+button:active {
+    background-color: none;
+}
+img {
+    cursor: pointer;
+}
+::-ms-clear {
+    display: none;
+}
+.bg {
+    &-red{
+        background-color: $red-color;
+    }
+    &-black{
+        background-color: $black-color;
+    }
+    &-green{
+        background-color: $green-color;
+    }
+    &-white{
+        background-color: $white-color;
+    }
+}
+
+.btn-icon{
+    width:auto;
+    height:auto;
+    margin-bottom:1px;
+    vertical-align: middle;
+    border-radius: 2px;
+    &-left{
+        width:15px;
+        height:15px;
+        margin-bottom:1px;
+        vertical-align: middle;
+        padding-right:12px;
+    }
+    &-right{
+        width:15px;
+        height:15px;
+        margin-bottom:1px;
+        vertical-align: middle;
+        padding-left:12px;
+    }
+}
+.btn-white{
+    background-color: white;
+    color: $font-color;
+    text-align: center;
+    &:active{
+        background-color: $btn-white-press-color;
+    }
+    &:hover{
+        background-color: $btn-white-hover-color;
+    }
+    &:disabled{
+        background-color: $btn-white-disabled-color;
+        color:$btn-white-disabled-font-color;
+    }
+}
+
+.btn-green{
+    background-color: $btn-green-normal-color;
+    color: $btn-green-font-color;
+    text-align: center;
+    &:active{
+        background-color: $btn-green-press-color;
+    }
+    &:hover{
+        background-color: $btn-green-hover-color;
+    }
+    &:disabled{
+        background-color: $btn-green-disabled-color;
+    }
+}
+
+.btn-border-green{
+    background-color: $btn-border-green-normal-color;
+    color: $btn-border-green-font-color;
+    text-align: center;
+    border: $btn-border $btn-border-green-normal;
+    &:active{
+        background-color: $btn-green-press-color;
+        border-color: $btn-border-green-press-color;
+    }
+    &:hover{
+        background-color: $btn-green-hover-color;
+        border-color: $btn-border-green-hover-color;
+        color: white;
+    }
+    &:disabled{
+        background-color: $btn-border-green-normal-color;
+        border-color: $btn-border-green-disabled-color;
+        color: $btn-border-green-disabled-font-color;
+    }
+}
+
+.btn-border-gray{
+    background-color: $btn-border-gray-normal-color;
+    color: $btn-border-gray-font-color;
+    text-align: center;
+    border: $btn-border $btn-border-gray-normal;
+    &:active{
+        background-color: $btn-border-gray-press-color;
+        border-color: $btn-border-gray-press;
+    }
+    &:hover{
+        background-color: $btn-border-gray-hover-color;
+        border-color: $btn-border-gray-hover;
+        color: $btn-border-gray-font-color;
+    }
+    &:disabled{
+        background-color: $btn-border-gray-normal-color;
+        border-color: $btn-border-gray-disabled;
+        color: $btn-border-gray-disabled-font-color;
+    }
+}
+
+.btn-red{
+    background-color: $btn-red-normal-color;
+    color: $btn-red-font-color;
+    text-align: center;
+    &:active{
+        background-color: $btn-red-press-color;
+    }
+    &:hover{
+        background-color: $btn-red-hover-color;
+    }
+    &:disabled{
+        background-color: $btn-red-disabled-color;
+    }
+}
+.input-normal{
+    padding:10px 20px;
+    border:1px solid !important;
+    border-color:$input-border-normal-color !important;
+    background-color: $input-bg-normal-color;
+    color:$input-font-color;
+    &:active{
+        background-color: $input-bg-hover-color;
+        border-color: $input-border-hover-color !important;
+    }
+    &:hover{
+        background-color: $input-bg-hover-color;
+        border-color: $input-border-hover-color !important;
+    }
+    &:focus{
+        background-color: $input-bg-focus-color;
+        border-color: $input-border-focus-color !important;
+    }
+    &:read-only{
+        background-color: $input-bg-read-only-color;
+        border-color: $input-border-read-only-color !important;
+    }
+    &:disabled{
+        background-color: $input-bg-read-only-color;
+        border-color: $input-border-read-only-color !important;
+    }
+    &::placeholder{
+        color:$input-font-placeholder-color;
+    }
+}
+
+.input-white{
+    padding:10px 20px;
+    background-color: $input-bg-normal-color;
+    color:$input-font-color;
+    border:0px;
+    &:active{
+        background-color: $input-bg-hover-color;
+    }
+    &:hover{
+        background-color: $input-bg-hover-color;
+    }
+    &:focus{
+        background-color: $input-bg-focus-color;
+    }
+    &:read-only{
+        background-color: $input-bg-read-only-color;
+    }
+    &:disabled{
+        background-color: $input-bg-read-only-color;
+    }
+    &::placeholder{
+        color:$input-font-placeholder-color;
+    }
+}
+
+.select-normal{
+    padding:8px 15px;
+    border:1px solid !important;
+    border-color:$input-border-normal-color !important;
+    background-color: $input-bg-normal-color;
+    color:$input-font-color;
+    -webkit-appearance: none;  /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    background: url(/arrow.png) no-repeat 100% 50%;  /* 화살표 모양의 이미지 */
+    &:-ms-expand { 
+        display: none; /* hide the default arrow in ie10 and ie11 */
+    }
+    &:active{
+        background-color: $input-bg-hover-color;
+        border-color: $input-border-hover-color !important;
+    }
+    &:hover{
+        background-color: $input-bg-hover-color;
+        border-color: $input-border-hover-color !important;
+    }
+    &:focus{
+        background-color: $input-bg-focus-color;
+        border-color: $input-border-focus-color !important;
+    }
+    &:disabled{
+        background-color: $input-bg-read-only-color;
+        border-color: $input-border-read-only-color !important;
+    }
+    &::placeholder{
+        color:$input-font-placeholder-color;
+    }
+}
+
+.select-options{
+    position: absolute;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.05);
+    border: solid 1px $select-option-border-color;
+    margin-top:5px;
+    padding-right:30px;
+    display: none;
+    li {
+        color:$input-font-color;
+        padding:8px 19px;
+        background-color: $input-bg-normal-color;
+        margin-right:-30px;
+        &:active{
+            background-color: $select-color;
+        }
+        &:hover{
+            background-color: $select-color;
+        }
+        &:focus{
+            background-color: $input-bg-focus-color;
+        }
+        &:disabled{
+            background-color: $input-bg-read-only-color;
+        }
+    }
+    
+}
+
+.inner-icon{
+    outline: none;
+    opacity: 1;
+    margin-left: -35px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+}
+
+.searchBar{
+    width:auto;
+    .select-normal {
+        width:100%;
+        max-width:60px;
+        float: left;
+    }
+    .select-options{
+        width:100%;
+        max-width:60px;
+        margin-top:38px;
+    }
+    .label {
+        padding:0 20px;
+    }
+    .line {
+        width: 1px;
+        border-right:1px solid $label-border-color;
+        font-size: 0.7em;
+        vertical-align: middle;
+    }
+    .inner-icon {
+        width:17px;
+        vertical-align: middle;
+        padding-bottom: 3px;
+        margin-left:20px;
+    }
+}
+
+.border{
+    border:1px solid $global-border-color;
+}
+
+.checkbox {
+    position: relative;
+    height: auto;
+    margin: 0;
+    padding-left: 25px;
+    vertical-align:top;
+    font-size:0.95em;
+    line-height: 38px;
+    input {
+        &[type='checkbox'] {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            z-index: 1;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            opacity: 0;
+            &:checked {
+                & + label,
+                & ~ label {
+                    &:before {
+                        border: 1px solid #0a3d53;
+                        background-image: url("/checkbox.svg");
+                        background-color: #0a3d53;
+                        background-size: cover;
+                    }
+                }
+            }
+            &.disabled,
+            &[disabled] {
+                & + label,
+                & ~ label {
+                    &:before {
+                        border: 1px solid #e1e6e9;
+                        background-color: #edeff3;
+                    }
+                }
+            }
+        }
+    }
+    label {
+        span{
+            padding-left:10px;
+            color:#c3cbd4;
+            font-weight: normal;
+        }
+        font-weight: bold;
+        vertical-align: middle;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            vertical-align: middle;
+            border: 1px solid #97acb1;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            box-sizing: content-box;
+        }
+    }
+}
+
+
+@for $i from 1 through 1000 {
+    $width: 1px * $i;
+    .width-#{$i} { 
+        width: $width;
+    }
+}
+@for $i from 1 through 100 {
+    $padding: 1px * $i;
+    .padding-#{$i} { 
+        padding: $padding;
+    }
+    .padding-left-#{$i} { 
+        padding-left: $padding;
+    }
+    .padding-top-#{$i} { 
+        padding-top: $padding;
+    }
+    .padding-right-#{$i} { 
+        padding-right: $padding;
+    }
+    .padding-bottom-#{$i} { 
+        padding-bottom: $padding;
+    }
+}
+@for $i from 1 through 100 {
+    $margin: 1px * $i;
+    .margin-#{$i} { 
+        padding: $margin;
+    }
+    .margin-left-#{$i} { 
+        margin-left: $margin;
+    }
+    .margin-top-#{$i} { 
+        margin-top: $margin;
+    }
+    .margin-right-#{$i} { 
+        margin-right: $margin;
+    }
+    .margin-bottom-#{$i} { 
+        margin-bottom: $margin;
+    }
+}

@@ -1,0 +1,99 @@
+// Breakpoints
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1024px;
+
+$font-size1: 14px;
+$size : 10px;
+
+//global-color
+$global-border-color:#b6b6ca;
+$bg-color:#ffffff;
+$font-color:#101717;
+$btn-border:1px solid;
+$black-color: #101717;
+$green-color: #04939d;
+$red-color: #ed4040;
+$white-color: #ffffff;
+$select-color: #f5fdfe;
+$select-option-border-color: #d9dfe3;
+$label-border-color: #e6e6ec;
+
+//global-line
+$line-color:#eeeff1;
+
+
+//global-white-button
+$btn-white-font-color:$font-color;
+$btn-white-normal-color:$white-color;
+$btn-white-hover-color:#f6f7f9;
+$btn-white-press-color:#e4e9ee;
+$btn-white-disabled-color:#ffffff;
+$btn-white-disabled-font-color:#ccd5da;
+
+//global-green-button
+$btn-green-font-color:#ffffff;
+$btn-green-normal-color:$green-color;
+$btn-green-hover-color:#129ca5;
+$btn-green-press-color:#008c94;
+$btn-green-disabled-color:#e4e9ee;
+
+//global-border-green-button
+$btn-border-green-font-color:$green-color;
+$btn-border-green-normal-color:white;
+$btn-border-green-hover-color:#129ca5;
+$btn-border-green-press-color:#008c94;
+$btn-border-green-disabled-color:#91959a;
+$btn-border-green-disabled-font-color:#55595e;
+$btn-border-green-normal: $btn-green-normal-color;
+$btn-border-green-hover: $btn-green-hover-color;
+$btn-border-green-press: $btn-green-press-color;
+$btn-border-green-disabled: $btn-green-disabled-color;
+
+//global-border-gray-button
+$btn-border-gray-font-color:black;
+$btn-border-gray-normal-color:white;
+$btn-border-gray-hover-color:#f8fafb;
+$btn-border-gray-press-color:#f3f6f7;
+$btn-border-gray-disabled-color:white;
+$btn-border-gray-disabled-font-color:#55595e;
+$btn-border-gray-normal: #c3cbd4;
+$btn-border-gray-hover: #c3cbd4;
+$btn-border-gray-press: #c3cbd4;
+$btn-border-gray-disabled:$btn-border-green-disabled-color;
+
+//global-red-button
+$btn-red-font-color:#ffffff;
+$btn-red-normal-color:$red-color;
+$btn-red-hover-color:#eb575a;
+$btn-red-press-color:#db3639;
+$btn-red-disabled-color:#e4e9ee;
+
+
+//global-input
+$input-font-color:$font-color;
+$input-font-placeholder-color:#91959a;
+$input-bg-normal-color:white;
+$input-bg-hover-color:white;
+$input-bg-focus-color:white;
+$input-bg-read-only-color:#f6f7f9;
+$input-border-normal-color:#c3cbd4;
+$input-border-hover-color:$green-color;
+$input-border-focus-color:$green-color;
+$input-border-read-only-color:#c3cbd4;
+
+//header
+$header-top-bg-color:#f6f7f9;
+$header-top-font-color:#000000;
+$header-nav-bg-color:#ffffff;
+$header-nav-font-color:#000000;
+$header-nav-font-disabled-color:#878d94;
+$header-nav-sub-bg-color:$green-color;
+$header-nav-sub-font-color:#ffffff;
+$header-nav-sub-font-active-color:#ffffff;
+$header-nav-sub-font-opacity:0.6;
+
+//footer
+$footer-bg-color:#ffffff;
+$footer-font-color:#101717;
+$footer-font-active-color:hsl(184, 95%, 32%);

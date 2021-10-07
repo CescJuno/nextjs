@@ -1,36 +1,26 @@
-import React from 'react';
-import App, { Container } from 'next/app';
-import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import "../styles/global.scss";
+//import { Provider as AuthProvider } from "next-auth/client";
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+import reducer from "../store/reducers";
+import progressMiddleware from "../middleware/progress";
+import interceptor from "../middleware/interceptors";
+import "../plugins/i18n";
+//import Routes from "../routers";
 
-const styles = {
-    layout: {
-        display: 'flex',
-        width: '100%',
-        height: '100%',
-        flexDirection: 'column',
-    },
-    main: {
-        flex: 1,
-    }
+const store = configureStore({
+  reducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ immutableCheck: false }).concat(progressMiddleware),
+  devTools: process.env.NODE_ENV !== `production`,
+});
+interceptor(store);
+const MyApp = ({ Component, pageProps }) => {
+  return (
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+  );
 };
-export default class RootApp extends App {
-    render() {
-        const { Component, ...other } = this.props;
-        return (
-            <Container>
-                <Head>
-                    <title>Static Website</title>
-                </Head>
-                <div style={styles.layout}>
-                    <Header />
-                    <main style={styles.main}>
-                        <Component {...other} />
-                    </main>
-                    <Footer />
-                </div>
-            </Container>
-        );
-    }
-}
+
+export default MyApp;

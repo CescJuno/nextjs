@@ -1,23 +1,18 @@
-import Link from 'next/link'
-
-const styles = {
-    header: {
-        height: 60,
-    },
-    divider: {
-        margin: '0 8px',
-    },
-}
-
-const Header = () => {
-    return (
-        <header style={styles.header}>
-            <Link href="/"><a>Home</a></Link>
-            <span style={styles.divider}>|</span>
-            <Link href="/post"><a>Post</a></Link>
-            <span style={styles.divider}>|</span>
-            <Link href="/about"><a>About</a></Link>
-        </header>
-    )
-}
+import Link from "next/link";
+const ProfileLink = props => (
+  <div>
+    <Link href={`/p/[profile]`} as={`/p/${props.profile}`}>
+      <a>Go to {props.name}'s profile</a>
+    </Link>
+  </div>
+);
+const Header = (props) => {
+  return (
+    <header>
+      <Link href="/">Home</Link>
+      <Link href="/about">About</Link>
+      <ProfileLink profile={'test'} />
+    </header>
+  );
+};
 export default Header;

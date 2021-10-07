@@ -1,13 +1,18 @@
-import Router from 'next/router';
+import Container from "../components/container";
+import Layout from "../components/layout";
+import Head from "next/head";
 
-const About = (props) => {
-
-    return (<>
-        <div> aaaa</div>
-        <div>
-            <button onClick={() => Router.push('/')}>Home</button>
-        </div>
-    </>)
-};
+function About() {
+  return (
+    <>
+      <Layout>
+        <Head>
+          <title>About</title>
+        </Head>
+        <Container>bbb</Container>
+      </Layout>
+    </>
+  );
+}
 
 export default About;
