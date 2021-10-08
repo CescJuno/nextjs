@@ -103,12 +103,54 @@ module.exports = require("@reduxjs/toolkit");
 /***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("1TCz");
+module.exports = __webpack_require__("cha2");
 
 
 /***/ }),
 
-/***/ "1TCz":
+/***/ "5psM":
+/***/ (function(module, exports) {
+
+module.exports = require("lodash/fp");
+
+/***/ }),
+
+/***/ "6Fm8":
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "MQhX":
+/***/ (function(module, exports) {
+
+module.exports = require("react-i18next");
+
+/***/ }),
+
+/***/ "Pcgs":
+/***/ (function(module) {
+
+module.exports = JSON.parse("{}");
+
+/***/ }),
+
+/***/ "cCmO":
+/***/ (function(module) {
+
+module.exports = JSON.parse("{}");
+
+/***/ }),
+
+/***/ "cDcd":
+/***/ (function(module, exports) {
+
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "cha2":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -122,19 +164,19 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 // EXTERNAL MODULE: ./styles/global.scss
 var global = __webpack_require__("6Fm8");
 
-// EXTERNAL MODULE: external "@reduxjs/toolkit"
-var toolkit_ = __webpack_require__("+wlD");
-
 // EXTERNAL MODULE: external "react-redux"
 var external_react_redux_ = __webpack_require__("h74D");
+
+// EXTERNAL MODULE: external "@reduxjs/toolkit"
+var toolkit_ = __webpack_require__("+wlD");
 
 // EXTERNAL MODULE: external "redux"
 var external_redux_ = __webpack_require__("rKB8");
 
-// EXTERNAL MODULE: ./store/reducers/test/test.js
-var test = __webpack_require__("CfJG");
+// EXTERNAL MODULE: ./store/reducers/test/test.ts + 1 modules
+var test = __webpack_require__("gVjj");
 
-// CONCATENATED MODULE: ./store/reducers/index.js
+// CONCATENATED MODULE: ./store/reducers/index.ts
 
 
 /* harmony default export */ var reducers = (Object(external_redux_["combineReducers"])({
@@ -159,23 +201,28 @@ const progressMiddleware = store => next => action => {
 };
 
 /* harmony default export */ var progress = (progressMiddleware);
-// EXTERNAL MODULE: ./plugins/axios.js
-var axios = __webpack_require__("3M6h");
+// CONCATENATED MODULE: ./store/store.ts
 
+
+ //import counterReducer from '../features/counter/counterSlice';
+
+const store_store = Object(toolkit_["configureStore"])({
+  reducer: reducers,
+  middleware: getDefaultMiddleware => getDefaultMiddleware({
+    immutableCheck: false
+  }).concat(progress),
+  devTools: false
+});
+/*
+export const store = configureStore({
+reducer: {
+  //counter: counterReducer,
+},
+});*/
 // EXTERNAL MODULE: external "i18next"
 var external_i18next_ = __webpack_require__("fnYr");
 var external_i18next_default = /*#__PURE__*/__webpack_require__.n(external_i18next_);
 
-// CONCATENATED MODULE: ./middleware/interceptors.js
-
-
-
-
-const interceptor = () => {
-  axios["a" /* default */].interceptors.request.use(response => fp_default.a.set(`headers.common.Accept-Language`, external_i18next_default.a.language, response));
-};
-
-/* harmony default export */ var interceptors = (interceptor);
 // EXTERNAL MODULE: external "i18next-browser-languagedetector"
 var external_i18next_browser_languagedetector_ = __webpack_require__("fhoN");
 var external_i18next_browser_languagedetector_default = /*#__PURE__*/__webpack_require__.n(external_i18next_browser_languagedetector_);
@@ -218,155 +265,25 @@ external_i18next_default.a.use(external_i18next_browser_languagedetector_default
   lng: "ko-KR"
 });
 /* harmony default export */ var i18n = (external_i18next_default.a);
-// CONCATENATED MODULE: ./pages/_app.js
+// CONCATENATED MODULE: ./pages/_app.tsx
 
 var __jsx = external_react_default.a.createElement;
- //import { Provider as AuthProvider } from "next-auth/client";
 
-
-
-
+//import { Provider as AuthProvider } from "next-auth/client";
 
 
  //import Routes from "../routers";
-
-const _app_store = Object(toolkit_["configureStore"])({
-  reducer: reducers,
-  middleware: getDefaultMiddleware => getDefaultMiddleware({
-    immutableCheck: false
-  }).concat(progress),
-  devTools: false
-});
-interceptors(_app_store);
 
 const MyApp = ({
   Component,
   pageProps
 }) => {
   return __jsx(external_react_redux_["Provider"], {
-    store: _app_store
+    store: store_store
   }, __jsx(Component, pageProps));
 };
 
 /* harmony default export */ var _app = __webpack_exports__["default"] = (MyApp);
-
-/***/ }),
-
-/***/ "3M6h":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zr5I");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-
-const $axios = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
-  headers: {
-    Pragma: "no-cache"
-  },
-  baseURL:  true ? "http://localhost:8081" : undefined,
-  withCredentials: true
-});
-/* harmony default export */ __webpack_exports__["a"] = ($axios);
-
-/***/ }),
-
-/***/ "5psM":
-/***/ (function(module, exports) {
-
-module.exports = require("lodash/fp");
-
-/***/ }),
-
-/***/ "6Fm8":
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ "CfJG":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getTest; });
-/* unused harmony export resetError */
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("+wlD");
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _plugins_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("3M6h");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-const getTest = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAsyncThunk"])(`test/getTest`, async query => {
-  const response = await _plugins_axios__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].get( true ? `/carts/index.json?q=` + query : undefined);
-  return response.data;
-});
-const slice = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createSlice"])({
-  name: `test`,
-  initialState: {
-    isLoading: false,
-    error: null,
-    carts: {},
-    totalPrice: 0
-  },
-  reducers: {
-    resetError: state => {
-      return _objectSpread(_objectSpread({}, state), {}, {
-        error: null
-      });
-    }
-  },
-  extraReducers: {
-    [getTest.pending]: state => {
-      state.isLoading = true;
-    },
-    [getTest.fulfilled]: (state, action) => {
-      state.isLoading = false;
-      state.carts = action.payload.data;
-    },
-    [getTest.rejected]: (state, action) => {
-      state.isLoading = false;
-      state.error = action.error.message;
-    }
-  }
-});
-const reducer = slice.reducer;
-/* harmony default export */ __webpack_exports__["a"] = (reducer);
-const {
-  resetError
-} = slice.actions;
-
-/***/ }),
-
-/***/ "MQhX":
-/***/ (function(module, exports) {
-
-module.exports = require("react-i18next");
-
-/***/ }),
-
-/***/ "Pcgs":
-/***/ (function(module) {
-
-module.exports = JSON.parse("{}");
-
-/***/ }),
-
-/***/ "cCmO":
-/***/ (function(module) {
-
-module.exports = JSON.parse("{}");
-
-/***/ }),
-
-/***/ "cDcd":
-/***/ (function(module, exports) {
-
-module.exports = require("react");
 
 /***/ }),
 
@@ -381,6 +298,90 @@ module.exports = require("i18next-browser-languagedetector");
 /***/ (function(module, exports) {
 
 module.exports = require("i18next");
+
+/***/ }),
+
+/***/ "gVjj":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ setTotalPrice; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ selectTotalPrice; });
+
+// UNUSED EXPORTS: getTest, resetError, incrementIfOdd
+
+// EXTERNAL MODULE: external "@reduxjs/toolkit"
+var toolkit_ = __webpack_require__("+wlD");
+
+// EXTERNAL MODULE: external "axios"
+var external_axios_ = __webpack_require__("zr5I");
+var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
+
+// CONCATENATED MODULE: ./plugins/axios.js
+
+const $axios = external_axios_default.a.create({
+  headers: {
+    Pragma: "no-cache"
+  },
+  baseURL:  true ? "http://localhost:8081" : undefined,
+  withCredentials: true
+});
+/* harmony default export */ var axios = ($axios);
+// CONCATENATED MODULE: ./store/reducers/test/test.ts
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+const initialState = {
+  isLoading: false,
+  error: null,
+  carts: {},
+  totalPrice: 0
+};
+const getTest = Object(toolkit_["createAsyncThunk"])(`test/getTest`, async query => {
+  const response = await axios.get( true ? `/carts/index.json?q=` + query : undefined);
+  return response.data;
+});
+const slice = Object(toolkit_["createSlice"])({
+  name: `test`,
+  initialState,
+  reducers: {
+    resetError: state => {
+      return _objectSpread(_objectSpread({}, state), {}, {
+        error: null
+      });
+    },
+    // Use the PayloadAction type to declare the contents of `action.payload`
+    setTotalPrice: (state, action) => {
+      state.totalPrice = action.payload;
+    }
+  },
+  extraReducers: builder => {
+    builder.addCase(getTest.pending, state => {
+      state.isLoading = true;
+    }).addCase(getTest.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.carts = action.payload;
+    });
+  }
+});
+const reducer = slice.reducer;
+/* harmony default export */ var test = __webpack_exports__["a"] = (reducer);
+const {
+  resetError,
+  setTotalPrice
+} = slice.actions;
+const selectTotalPrice = state => state.testReducer.totalPrice;
+const incrementIfOdd = price => (dispatch, getState) => {
+  const currentTotalPrice = selectTotalPrice(getState());
+  dispatch(setTotalPrice(price));
+};
 
 /***/ }),
 

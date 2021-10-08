@@ -150,21 +150,75 @@ function withRouter(ComposedComponent) {
 
 /***/ }),
 
-/***/ "3M6h":
+/***/ "23aj":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("zr5I");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
 
-const $axios = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
-  headers: {
-    Pragma: "no-cache"
-  },
-  baseURL:  true ? "http://localhost:8081" : undefined,
-  withCredentials: true
-});
-/* harmony default export */ __webpack_exports__["a"] = ($axios);
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return /* binding */ getServerSideProps; });
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: ./store/reducers/test/test.ts + 1 modules
+var test = __webpack_require__("gVjj");
+
+// EXTERNAL MODULE: external "react-redux"
+var external_react_redux_ = __webpack_require__("h74D");
+
+// CONCATENATED MODULE: ./helper/hooks.ts
+
+// Use throughout your app instead of plain `useDispatch` and `useSelector`
+const useAppDispatch = () => Object(external_react_redux_["useDispatch"])();
+const useAppSelector = external_react_redux_["useSelector"];
+// EXTERNAL MODULE: ./components/layout.tsx + 4 modules
+var layout = __webpack_require__("5M6V");
+
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+
+// EXTERNAL MODULE: ./node_modules/next/app.js
+var app = __webpack_require__("8Bbg");
+
+// CONCATENATED MODULE: ./pages/index.tsx
+
+var __jsx = external_react_default.a.createElement;
+//import { useSession, getSession } from "next-auth/client";
+
+
+
+
+
+
+
+const Index = () => {
+  const didLoad = Object(external_react_["useRef"])();
+  const price = useAppSelector(test["b" /* selectTotalPrice */]);
+  const dispatch = useAppDispatch();
+  return __jsx(layout["a" /* default */], null, __jsx(head_default.a, null, __jsx("title", null, "Main")), __jsx(app["Container"], null, __jsx("div", {
+    onClick: () => dispatch(Object(test["c" /* setTotalPrice */])(3232))
+  }, price)));
+};
+
+async function getServerSideProps(context) {
+  return {
+    props: {
+      number: 0 //context.req.session.num === undefined? 0 : context.req.session.num,
+
+    }
+  };
+}
+
+Index.getLayout = function getLayout(page) {
+  return `sdfsdf`;
+};
+
+/* harmony default export */ var pages = __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
@@ -227,15 +281,137 @@ function assign(target, ...searchParamsList) {
 /***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("RNiq");
+module.exports = __webpack_require__("23aj");
 
 
 /***/ }),
 
-/***/ "5psM":
-/***/ (function(module, exports) {
+/***/ "5M6V":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = require("lodash/fp");
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// CONCATENATED MODULE: ./components/Footer.tsx
+
+var __jsx = external_react_default.a.createElement;
+
+const Footer = props => {
+  return __jsx("footer", {
+    className: "bg-accent-1 border-t border-accent-2"
+  }, __jsx("div", {
+    className: "py-28 flex flex-col lg:flex-row items-center"
+  }, __jsx("h3", {
+    className: "text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2"
+  }, "Statically Generated with Next.js."), __jsx("div", {
+    className: "flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2"
+  }, __jsx("a", {
+    href: "https://nextjs.org/docs/basic-features/pages",
+    className: "mx-3 hover:bg-white hover:text-black border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
+  }, "Read Documentation"))));
+};
+
+/* harmony default export */ var components_Footer = (Footer);
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+
+// CONCATENATED MODULE: ./lib/constants.js
+const EXAMPLE_PATH = 'blog-starter';
+const CMS_NAME = 'Markdown';
+const HOME_OG_IMAGE_URL = 'https://og-image.now.sh/Next.js%20Blog%20Starter%20Example.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg';
+// CONCATENATED MODULE: ./components/meta.tsx
+
+var meta_jsx = external_react_default.a.createElement;
+
+
+function Meta() {
+  return meta_jsx(head_default.a, null, meta_jsx("link", {
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "/favicon/apple-touch-icon.png"
+  }), meta_jsx("link", {
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    href: "/favicon/favicon-32x32.png"
+  }), meta_jsx("link", {
+    rel: "icon",
+    type: "image/png",
+    sizes: "16x16",
+    href: "/favicon/favicon-16x16.png"
+  }), meta_jsx("link", {
+    rel: "mask-icon",
+    href: "/favicon/safari-pinned-tab.svg",
+    color: "#000000"
+  }), meta_jsx("link", {
+    rel: "shortcut icon",
+    href: "/favicon/favicon.ico"
+  }), meta_jsx("meta", {
+    name: "msapplication-TileColor",
+    content: "#000000"
+  }), meta_jsx("meta", {
+    name: "msapplication-config",
+    content: "/favicon/browserconfig.xml"
+  }), meta_jsx("meta", {
+    name: "theme-color",
+    content: "#000"
+  }), meta_jsx("link", {
+    rel: "alternate",
+    type: "application/rss+xml",
+    href: "/feed.xml"
+  }), meta_jsx("meta", {
+    name: "description",
+    content: `A statically generated blog example using Next.js and ${CMS_NAME}.`
+  }), meta_jsx("meta", {
+    property: "og:image",
+    content: HOME_OG_IMAGE_URL
+  }));
+}
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__("YFqc");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// CONCATENATED MODULE: ./components/Header.tsx
+
+var Header_jsx = external_react_default.a.createElement;
+
+
+const ProfileLink = props => Header_jsx("div", null, Header_jsx(link_default.a, {
+  href: `/p/[profile]`,
+  as: `/p/${props.profile}`
+}, Header_jsx("a", null, "Go to ", props.name, "'s profile")));
+
+const Header = props => {
+  return Header_jsx("header", null, Header_jsx(link_default.a, {
+    href: "/"
+  }, "Home"), Header_jsx(link_default.a, {
+    href: "/about"
+  }, "About"), Header_jsx(ProfileLink, {
+    profile: 'test'
+  }));
+};
+
+/* harmony default export */ var components_Header = (Header);
+// CONCATENATED MODULE: ./components/layout.tsx
+
+var layout_jsx = external_react_default.a.createElement;
+
+
+
+
+const Layout = ({
+  children
+}) => {
+  return layout_jsx(external_react_default.a.Fragment, null, layout_jsx(Meta, null), layout_jsx(components_Header, null), layout_jsx("section", {
+    className: "min-h-screen"
+  }, layout_jsx("main", null, children)), layout_jsx(components_Footer, null));
+};
+
+/* harmony default export */ var layout = __webpack_exports__["a"] = (Layout);
 
 /***/ }),
 
@@ -431,6 +607,14 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
+/***/ "8Bbg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("B5Ud")
+
+
+/***/ }),
+
 /***/ "AroE":
 /***/ (function(module, exports) {
 
@@ -441,6 +625,131 @@ function _interopRequireDefault(obj) {
 }
 
 module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "B5Ud":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__("AroE");
+
+exports.__esModule = true;
+exports.Container = Container;
+exports.createUrl = createUrl;
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__("cDcd"));
+
+var _utils = __webpack_require__("kYf9");
+
+exports.AppInitialProps = _utils.AppInitialProps;
+exports.NextWebVitalsMetric = _utils.NextWebVitalsMetric;
+/**
+* `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
+* This allows for keeping state between navigation, custom error handling, injecting additional data.
+*/
+
+async function appGetInitialProps({
+  Component,
+  ctx
+}) {
+  const pageProps = await (0, _utils.loadGetInitialProps)(Component, ctx);
+  return {
+    pageProps
+  };
+}
+
+class App extends _react.default.Component {
+  // Kept here for backwards compatibility.
+  // When someone ended App they could call `super.componentDidCatch`.
+  // @deprecated This method is no longer needed. Errors are caught at the top level
+  componentDidCatch(error, _errorInfo) {
+    throw error;
+  }
+
+  render() {
+    const {
+      router,
+      Component,
+      pageProps,
+      __N_SSG,
+      __N_SSP
+    } = this.props;
+    return /*#__PURE__*/_react.default.createElement(Component, Object.assign({}, pageProps, // we don't add the legacy URL prop if it's using non-legacy
+    // methods like getStaticProps and getServerSideProps
+    !(__N_SSG || __N_SSP) ? {
+      url: createUrl(router)
+    } : {}));
+  }
+
+}
+
+exports.default = App;
+App.origGetInitialProps = appGetInitialProps;
+App.getInitialProps = appGetInitialProps;
+let warnContainer;
+let warnUrl;
+
+if (false) {} // @deprecated noop for now until removal
+
+
+function Container(p) {
+  if (false) {}
+  return p.children;
+}
+
+function createUrl(router) {
+  // This is to make sure we don't references the router object at call time
+  const {
+    pathname,
+    asPath,
+    query
+  } = router;
+  return {
+    get query() {
+      if (false) {}
+      return query;
+    },
+
+    get pathname() {
+      if (false) {}
+      return pathname;
+    },
+
+    get asPath() {
+      if (false) {}
+      return asPath;
+    },
+
+    back: () => {
+      if (false) {}
+      router.back();
+    },
+    push: (url, as) => {
+      if (false) {}
+      return router.push(url, as);
+    },
+    pushTo: (href, as) => {
+      if (false) {}
+      const pushRoute = as ? href : '';
+      const pushUrl = as || href;
+      return router.push(pushRoute, pushUrl);
+    },
+    replace: (url, as) => {
+      if (false) {}
+      return router.replace(url, as);
+    },
+    replaceTo: (href, as) => {
+      if (false) {}
+      const replaceRoute = as ? href : '';
+      const replaceUrl = as || href;
+      return router.replace(replaceRoute, replaceUrl);
+    }
+  };
+}
 
 /***/ }),
 
@@ -467,275 +776,10 @@ module.exports = _typeof;
 
 /***/ }),
 
-/***/ "CafY":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// CONCATENATED MODULE: ./components/footer.js
-
-var __jsx = external_react_default.a.createElement;
-
-const Footer = props => {
-  return __jsx("footer", {
-    className: "bg-accent-1 border-t border-accent-2"
-  }, __jsx("div", {
-    className: "py-28 flex flex-col lg:flex-row items-center"
-  }, __jsx("h3", {
-    className: "text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2"
-  }, "Statically Generated with Next.js."), __jsx("div", {
-    className: "flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2"
-  }, __jsx("a", {
-    href: "https://nextjs.org/docs/basic-features/pages",
-    className: "mx-3 hover:bg-white hover:text-black border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-  }, "Read Documentation"))));
-};
-
-/* harmony default export */ var footer = (Footer);
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__("xnum");
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-
-// CONCATENATED MODULE: ./lib/constants.js
-const EXAMPLE_PATH = 'blog-starter';
-const CMS_NAME = 'Markdown';
-const HOME_OG_IMAGE_URL = 'https://og-image.now.sh/Next.js%20Blog%20Starter%20Example.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg';
-// CONCATENATED MODULE: ./components/meta.js
-
-var meta_jsx = external_react_default.a.createElement;
-
-
-function Meta() {
-  return meta_jsx(head_default.a, null, meta_jsx("link", {
-    rel: "apple-touch-icon",
-    sizes: "180x180",
-    href: "/favicon/apple-touch-icon.png"
-  }), meta_jsx("link", {
-    rel: "icon",
-    type: "image/png",
-    sizes: "32x32",
-    href: "/favicon/favicon-32x32.png"
-  }), meta_jsx("link", {
-    rel: "icon",
-    type: "image/png",
-    sizes: "16x16",
-    href: "/favicon/favicon-16x16.png"
-  }), meta_jsx("link", {
-    rel: "mask-icon",
-    href: "/favicon/safari-pinned-tab.svg",
-    color: "#000000"
-  }), meta_jsx("link", {
-    rel: "shortcut icon",
-    href: "/favicon/favicon.ico"
-  }), meta_jsx("meta", {
-    name: "msapplication-TileColor",
-    content: "#000000"
-  }), meta_jsx("meta", {
-    name: "msapplication-config",
-    content: "/favicon/browserconfig.xml"
-  }), meta_jsx("meta", {
-    name: "theme-color",
-    content: "#000"
-  }), meta_jsx("link", {
-    rel: "alternate",
-    type: "application/rss+xml",
-    href: "/feed.xml"
-  }), meta_jsx("meta", {
-    name: "description",
-    content: `A statically generated blog example using Next.js and ${CMS_NAME}.`
-  }), meta_jsx("meta", {
-    property: "og:image",
-    content: HOME_OG_IMAGE_URL
-  }));
-}
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__("YFqc");
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-
-// CONCATENATED MODULE: ./components/header.js
-
-var header_jsx = external_react_default.a.createElement;
-
-
-const ProfileLink = props => header_jsx("div", null, header_jsx(link_default.a, {
-  href: `/p/[profile]`,
-  as: `/p/${props.profile}`
-}, header_jsx("a", null, "Go to ", props.name, "'s profile")));
-
-const Header = props => {
-  return header_jsx("header", null, header_jsx(link_default.a, {
-    href: "/"
-  }, "Home"), header_jsx(link_default.a, {
-    href: "/about"
-  }, "About"), header_jsx(ProfileLink, {
-    profile: 'test'
-  }));
-};
-
-/* harmony default export */ var header = (Header);
-// CONCATENATED MODULE: ./components/layout.js
-
-var layout_jsx = external_react_default.a.createElement;
-
-
-
-
-const Layout = ({
-  children
-}) => {
-  return layout_jsx(external_react_default.a.Fragment, null, layout_jsx(Meta, null), layout_jsx(header, null), layout_jsx("section", {
-    className: "min-h-screen"
-  }, layout_jsx("main", null, children)), layout_jsx(footer, null));
-};
-
-/* harmony default export */ var layout = __webpack_exports__["a"] = (Layout);
-
-/***/ }),
-
-/***/ "CfJG":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getTest; });
-/* unused harmony export resetError */
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("+wlD");
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _plugins_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("3M6h");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-const getTest = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createAsyncThunk"])(`test/getTest`, async query => {
-  const response = await _plugins_axios__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].get( true ? `/carts/index.json?q=` + query : undefined);
-  return response.data;
-});
-const slice = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__["createSlice"])({
-  name: `test`,
-  initialState: {
-    isLoading: false,
-    error: null,
-    carts: {},
-    totalPrice: 0
-  },
-  reducers: {
-    resetError: state => {
-      return _objectSpread(_objectSpread({}, state), {}, {
-        error: null
-      });
-    }
-  },
-  extraReducers: {
-    [getTest.pending]: state => {
-      state.isLoading = true;
-    },
-    [getTest.fulfilled]: (state, action) => {
-      state.isLoading = false;
-      state.carts = action.payload.data;
-    },
-    [getTest.rejected]: (state, action) => {
-      state.isLoading = false;
-      state.error = action.error.message;
-    }
-  }
-});
-const reducer = slice.reducer;
-/* harmony default export */ __webpack_exports__["a"] = (reducer);
-const {
-  resetError
-} = slice.actions;
-
-/***/ }),
-
-/***/ "MWqi":
-/***/ (function(module, exports) {
-
-module.exports = require("reselect");
-
-/***/ }),
-
 /***/ "Osoz":
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/router-context.js");
-
-/***/ }),
-
-/***/ "RNiq":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("vUxr");
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("CafY");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("xnum");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash_fp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("5psM");
-/* harmony import */ var lodash_fp__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_fp__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("h74D");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _store_reducers_test_test__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("CfJG");
-/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("MWqi");
-/* harmony import */ var reselect__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(reselect__WEBPACK_IMPORTED_MODULE_7__);
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
- //import { useSession, getSession } from "next-auth/client";
-
-
-
-
-
-
-const Main = ({
-  number
-}) => {
-  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useDispatch"])();
-  const didLoad = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
-  const stateCartSelector = Object(reselect__WEBPACK_IMPORTED_MODULE_7__["createSelector"])(state => state.cartsReducer, cartInfo => ({
-    error: lodash_fp__WEBPACK_IMPORTED_MODULE_4___default.a.get(`error`, cartInfo),
-    isLoading: lodash_fp__WEBPACK_IMPORTED_MODULE_4___default.a.get(`isLoading`, cartInfo),
-    carts: lodash_fp__WEBPACK_IMPORTED_MODULE_4___default.a.get(`carts`, cartInfo),
-    totalPrice: lodash_fp__WEBPACK_IMPORTED_MODULE_4___default.a.get(`totalPrice`, cartInfo)
-  }));
-  const stateCart = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useSelector"])(stateCartSelector);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (!didLoad.current) {
-      dispatch(Object(_store_reducers_test_test__WEBPACK_IMPORTED_MODULE_6__[/* getTest */ "b"])()).then(res => {
-        const error = lodash_fp__WEBPACK_IMPORTED_MODULE_4___default.a.get(`error`, res);
-        if (error) throw res;
-      }).catch(err => {
-        alert(err);
-      });
-      didLoad.current = true;
-    }
-  }, [dispatch]);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, null, __jsx("title", null, "\uBA54\uC778\uD654\uBA74")), __jsx(_components_container__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], null)));
-};
-
-async function getServerSideProps(context) {
-  return {
-    props: {
-      number: 0
-    }
-  };
-}
-Main.defaultProps = {
-  number: 0
-};
-/* harmony default export */ __webpack_exports__["default"] = (Main);
 
 /***/ }),
 
@@ -2232,6 +2276,90 @@ exports.ST = ST;
 
 /***/ }),
 
+/***/ "gVjj":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "c", function() { return /* binding */ setTotalPrice; });
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ selectTotalPrice; });
+
+// UNUSED EXPORTS: getTest, resetError, incrementIfOdd
+
+// EXTERNAL MODULE: external "@reduxjs/toolkit"
+var toolkit_ = __webpack_require__("+wlD");
+
+// EXTERNAL MODULE: external "axios"
+var external_axios_ = __webpack_require__("zr5I");
+var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
+
+// CONCATENATED MODULE: ./plugins/axios.js
+
+const $axios = external_axios_default.a.create({
+  headers: {
+    Pragma: "no-cache"
+  },
+  baseURL:  true ? "http://localhost:8081" : undefined,
+  withCredentials: true
+});
+/* harmony default export */ var axios = ($axios);
+// CONCATENATED MODULE: ./store/reducers/test/test.ts
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+const initialState = {
+  isLoading: false,
+  error: null,
+  carts: {},
+  totalPrice: 0
+};
+const getTest = Object(toolkit_["createAsyncThunk"])(`test/getTest`, async query => {
+  const response = await axios.get( true ? `/carts/index.json?q=` + query : undefined);
+  return response.data;
+});
+const slice = Object(toolkit_["createSlice"])({
+  name: `test`,
+  initialState,
+  reducers: {
+    resetError: state => {
+      return _objectSpread(_objectSpread({}, state), {}, {
+        error: null
+      });
+    },
+    // Use the PayloadAction type to declare the contents of `action.payload`
+    setTotalPrice: (state, action) => {
+      state.totalPrice = action.payload;
+    }
+  },
+  extraReducers: builder => {
+    builder.addCase(getTest.pending, state => {
+      state.isLoading = true;
+    }).addCase(getTest.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.carts = action.payload;
+    });
+  }
+});
+const reducer = slice.reducer;
+/* harmony default export */ var test = __webpack_exports__["a"] = (reducer);
+const {
+  resetError,
+  setTotalPrice
+} = slice.actions;
+const selectTotalPrice = state => state.testReducer.totalPrice;
+const incrementIfOdd = price => (dispatch, getState) => {
+  const currentTotalPrice = selectTotalPrice(getState());
+  dispatch(setTotalPrice(price));
+};
+
+/***/ }),
+
 /***/ "gguc":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2330,6 +2458,13 @@ function parseRelativeUrl(url, base) {
     href: href.slice(DUMMY_BASE.origin.length)
   };
 }
+
+/***/ }),
+
+/***/ "kYf9":
+/***/ (function(module, exports) {
+
+module.exports = require("next/dist/next-server/lib/utils.js");
 
 /***/ }),
 
@@ -2482,27 +2617,6 @@ function makePublicRouterInstance(router) {
   });
   return instance;
 }
-
-/***/ }),
-
-/***/ "vUxr":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const Container = ({
-  children
-}) => {
-  return __jsx("div", {
-    className: "container mx-auto px-5"
-  }, children);
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Container);
 
 /***/ }),
 
