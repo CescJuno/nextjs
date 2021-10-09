@@ -150,6 +150,13 @@ function withRouter(ComposedComponent) {
 
 /***/ }),
 
+/***/ "0HQ6":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/styles");
+
+/***/ }),
+
 /***/ "23aj":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -175,7 +182,7 @@ var external_react_redux_ = __webpack_require__("h74D");
 // Use throughout your app instead of plain `useDispatch` and `useSelector`
 const useAppDispatch = () => Object(external_react_redux_["useDispatch"])();
 const useAppSelector = external_react_redux_["useSelector"];
-// EXTERNAL MODULE: ./components/layout.tsx + 4 modules
+// EXTERNAL MODULE: ./components/layout.tsx + 5 modules
 var layout = __webpack_require__("5M6V");
 
 // EXTERNAL MODULE: external "next/head"
@@ -375,10 +382,214 @@ function Meta() {
 var next_link = __webpack_require__("YFqc");
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 
+// EXTERNAL MODULE: external "@mui/material/styles"
+var styles_ = __webpack_require__("0HQ6");
+
+// EXTERNAL MODULE: external "@mui/material/AppBar"
+var AppBar_ = __webpack_require__("NVXx");
+var AppBar_default = /*#__PURE__*/__webpack_require__.n(AppBar_);
+
+// EXTERNAL MODULE: external "@mui/material/Toolbar"
+var Toolbar_ = __webpack_require__("I2Qn");
+var Toolbar_default = /*#__PURE__*/__webpack_require__.n(Toolbar_);
+
+// EXTERNAL MODULE: external "@mui/material/Drawer"
+var Drawer_ = __webpack_require__("fwjB");
+var Drawer_default = /*#__PURE__*/__webpack_require__.n(Drawer_);
+
+// EXTERNAL MODULE: external "@mui/material/IconButton"
+var IconButton_ = __webpack_require__("U/t+");
+var IconButton_default = /*#__PURE__*/__webpack_require__.n(IconButton_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/Menu"
+var Menu_ = __webpack_require__("x5Hn");
+var Menu_default = /*#__PURE__*/__webpack_require__.n(Menu_);
+
+// EXTERNAL MODULE: external "@mui/material/List"
+var List_ = __webpack_require__("oYqQ");
+var List_default = /*#__PURE__*/__webpack_require__.n(List_);
+
+// EXTERNAL MODULE: external "@mui/material/Typography"
+var Typography_ = __webpack_require__("TCRz");
+var Typography_default = /*#__PURE__*/__webpack_require__.n(Typography_);
+
+// EXTERNAL MODULE: external "@mui/material/Divider"
+var Divider_ = __webpack_require__("Uli3");
+var Divider_default = /*#__PURE__*/__webpack_require__.n(Divider_);
+
+// EXTERNAL MODULE: external "@mui/material/Badge"
+var Badge_ = __webpack_require__("PAAD");
+var Badge_default = /*#__PURE__*/__webpack_require__.n(Badge_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/ChevronLeft"
+var ChevronLeft_ = __webpack_require__("y3yp");
+var ChevronLeft_default = /*#__PURE__*/__webpack_require__.n(ChevronLeft_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/Notifications"
+var Notifications_ = __webpack_require__("LLim");
+var Notifications_default = /*#__PURE__*/__webpack_require__.n(Notifications_);
+
+// EXTERNAL MODULE: external "@mui/material/ListItem"
+var ListItem_ = __webpack_require__("u9rY");
+var ListItem_default = /*#__PURE__*/__webpack_require__.n(ListItem_);
+
+// EXTERNAL MODULE: external "@mui/material/ListItemIcon"
+var ListItemIcon_ = __webpack_require__("THHt");
+var ListItemIcon_default = /*#__PURE__*/__webpack_require__.n(ListItemIcon_);
+
+// EXTERNAL MODULE: external "@mui/material/ListItemText"
+var ListItemText_ = __webpack_require__("5yHW");
+var ListItemText_default = /*#__PURE__*/__webpack_require__.n(ListItemText_);
+
+// EXTERNAL MODULE: external "@mui/material/ListSubheader"
+var ListSubheader_ = __webpack_require__("POEI");
+var ListSubheader_default = /*#__PURE__*/__webpack_require__.n(ListSubheader_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/Dashboard"
+var Dashboard_ = __webpack_require__("Pd1T");
+var Dashboard_default = /*#__PURE__*/__webpack_require__.n(Dashboard_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/ShoppingCart"
+var ShoppingCart_ = __webpack_require__("c1f4");
+var ShoppingCart_default = /*#__PURE__*/__webpack_require__.n(ShoppingCart_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/People"
+var People_ = __webpack_require__("hNgU");
+var People_default = /*#__PURE__*/__webpack_require__.n(People_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/BarChart"
+var BarChart_ = __webpack_require__("B+tQ");
+var BarChart_default = /*#__PURE__*/__webpack_require__.n(BarChart_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/Layers"
+var Layers_ = __webpack_require__("x/Zf");
+var Layers_default = /*#__PURE__*/__webpack_require__.n(Layers_);
+
+// EXTERNAL MODULE: external "@mui/icons-material/Assignment"
+var Assignment_ = __webpack_require__("BDPS");
+var Assignment_default = /*#__PURE__*/__webpack_require__.n(Assignment_);
+
+// CONCATENATED MODULE: ./components/ListItem.tsx
+var ListItem_jsx = external_react_["createElement"];
+
+
+
+
+
+
+
+
+
+
+
+const mainListItems = ListItem_jsx("div", null, ListItem_jsx(ListItem_default.a, {
+  button: true
+}, ListItem_jsx(ListItemIcon_default.a, null, ListItem_jsx(Dashboard_default.a, null)), ListItem_jsx(ListItemText_default.a, {
+  primary: "Dashboard"
+})), ListItem_jsx(ListItem_default.a, {
+  button: true
+}, ListItem_jsx(ListItemIcon_default.a, null, ListItem_jsx(ShoppingCart_default.a, null)), ListItem_jsx(ListItemText_default.a, {
+  primary: "Orders"
+})), ListItem_jsx(ListItem_default.a, {
+  button: true
+}, ListItem_jsx(ListItemIcon_default.a, null, ListItem_jsx(People_default.a, null)), ListItem_jsx(ListItemText_default.a, {
+  primary: "Customers"
+})), ListItem_jsx(ListItem_default.a, {
+  button: true
+}, ListItem_jsx(ListItemIcon_default.a, null, ListItem_jsx(BarChart_default.a, null)), ListItem_jsx(ListItemText_default.a, {
+  primary: "Reports"
+})), ListItem_jsx(ListItem_default.a, {
+  button: true
+}, ListItem_jsx(ListItemIcon_default.a, null, ListItem_jsx(Layers_default.a, null)), ListItem_jsx(ListItemText_default.a, {
+  primary: "Integrations"
+})));
+const secondaryListItems = ListItem_jsx("div", null, ListItem_jsx(ListSubheader_default.a, {
+  inset: true
+}, "Saved reports"), ListItem_jsx(ListItem_default.a, {
+  button: true
+}, ListItem_jsx(ListItemIcon_default.a, null, ListItem_jsx(Assignment_default.a, null)), ListItem_jsx(ListItemText_default.a, {
+  primary: "Current month"
+})), ListItem_jsx(ListItem_default.a, {
+  button: true
+}, ListItem_jsx(ListItemIcon_default.a, null, ListItem_jsx(Assignment_default.a, null)), ListItem_jsx(ListItemText_default.a, {
+  primary: "Last quarter"
+})), ListItem_jsx(ListItem_default.a, {
+  button: true
+}, ListItem_jsx(ListItemIcon_default.a, null, ListItem_jsx(Assignment_default.a, null)), ListItem_jsx(ListItemText_default.a, {
+  primary: "Year-end sale"
+})));
 // CONCATENATED MODULE: ./components/Header.tsx
 
 var Header_jsx = external_react_default.a.createElement;
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const drawerWidth = 240;
+const AppBar = Object(styles_["styled"])(AppBar_default.a, {
+  shouldForwardProp: prop => prop !== 'open'
+})(({
+  theme,
+  open
+}) => _objectSpread({
+  zIndex: theme.zIndex.drawer + 1,
+  transition: theme.transitions.create(['width', 'margin'], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen
+  })
+}, open && {
+  marginLeft: drawerWidth,
+  width: `calc(100% - ${drawerWidth}px)`,
+  transition: theme.transitions.create(['width', 'margin'], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.enteringScreen
+  })
+}));
+const Drawer = Object(styles_["styled"])(Drawer_default.a, {
+  shouldForwardProp: prop => prop !== 'open'
+})(({
+  theme,
+  open
+}) => ({
+  '& .MuiDrawer-paper': _objectSpread({
+    position: 'relative',
+    whiteSpace: 'nowrap',
+    width: drawerWidth,
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen
+    }),
+    boxSizing: 'border-box'
+  }, !open && {
+    overflowX: 'hidden',
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen
+    }),
+    width: theme.spacing(7),
+    [theme.breakpoints.up('sm')]: {
+      width: theme.spacing(9)
+    }
+  })
+}));
 
 const ProfileLink = props => Header_jsx("div", null, Header_jsx(link_default.a, {
   href: `/p/[profile]`,
@@ -386,13 +597,59 @@ const ProfileLink = props => Header_jsx("div", null, Header_jsx(link_default.a, 
 }, Header_jsx("a", null, "Go to ", props.name, "'s profile")));
 
 const Header = props => {
-  return Header_jsx("header", null, Header_jsx(link_default.a, {
-    href: "/"
-  }, "Home"), Header_jsx(link_default.a, {
-    href: "/about"
-  }, "About"), Header_jsx(ProfileLink, {
-    profile: 'test'
-  }));
+  const {
+    0: open,
+    1: setOpen
+  } = Object(external_react_["useState"])(true);
+
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
+
+  return Header_jsx("header", null, Header_jsx(AppBar, {
+    position: "absolute",
+    open: open
+  }, Header_jsx(Toolbar_default.a, {
+    sx: {
+      pr: '24px' // keep right padding when drawer closed
+
+    }
+  }, Header_jsx(IconButton_default.a, {
+    edge: "start",
+    color: "inherit",
+    "aria-label": "open drawer",
+    onClick: toggleDrawer,
+    sx: _objectSpread({
+      marginRight: '36px'
+    }, open && {
+      display: 'none'
+    })
+  }, Header_jsx(Menu_default.a, null)), Header_jsx(Typography_default.a, {
+    component: "h1",
+    variant: "h6",
+    color: "inherit",
+    noWrap: true,
+    sx: {
+      flexGrow: 1
+    }
+  }, "Dashboard"), Header_jsx(IconButton_default.a, {
+    color: "inherit"
+  }, Header_jsx(Badge_default.a, {
+    badgeContent: 4,
+    color: "secondary"
+  }, Header_jsx(Notifications_default.a, null))))), Header_jsx(Drawer, {
+    variant: "permanent",
+    open: open
+  }, Header_jsx(Toolbar_default.a, {
+    sx: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      px: [1]
+    }
+  }, Header_jsx(IconButton_default.a, {
+    onClick: toggleDrawer
+  }, Header_jsx(ChevronLeft_default.a, null))), Header_jsx(Divider_default.a, null), Header_jsx(List_default.a, null, mainListItems), Header_jsx(Divider_default.a, null), Header_jsx(List_default.a, null, secondaryListItems)));
 };
 
 /* harmony default export */ var components_Header = (Header);
@@ -412,6 +669,13 @@ const Layout = ({
 };
 
 /* harmony default export */ var layout = __webpack_exports__["a"] = (Layout);
+
+/***/ }),
+
+/***/ "5yHW":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/ListItemText");
 
 /***/ }),
 
@@ -628,6 +892,13 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
+/***/ "B+tQ":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/BarChart");
+
+/***/ }),
+
 /***/ "B5Ud":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -753,6 +1024,13 @@ function createUrl(router) {
 
 /***/ }),
 
+/***/ "BDPS":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/Assignment");
+
+/***/ }),
+
 /***/ "C+bE":
 /***/ (function(module, exports) {
 
@@ -776,10 +1054,52 @@ module.exports = _typeof;
 
 /***/ }),
 
+/***/ "I2Qn":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/Toolbar");
+
+/***/ }),
+
+/***/ "LLim":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/Notifications");
+
+/***/ }),
+
+/***/ "NVXx":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/AppBar");
+
+/***/ }),
+
 /***/ "Osoz":
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/router-context.js");
+
+/***/ }),
+
+/***/ "PAAD":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/Badge");
+
+/***/ }),
+
+/***/ "POEI":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/ListSubheader");
+
+/***/ }),
+
+/***/ "Pd1T":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/Dashboard");
 
 /***/ }),
 
@@ -788,6 +1108,34 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 
 "use strict";
 
+
+/***/ }),
+
+/***/ "TCRz":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/Typography");
+
+/***/ }),
+
+/***/ "THHt":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/ListItemIcon");
+
+/***/ }),
+
+/***/ "U/t+":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/IconButton");
+
+/***/ }),
+
+/***/ "Uli3":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/Divider");
 
 /***/ }),
 
@@ -948,6 +1296,13 @@ function getRouteRegex(normalizedRoute) {
     groups
   };
 }
+
+/***/ }),
+
+/***/ "c1f4":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/ShoppingCart");
 
 /***/ }),
 
@@ -2167,6 +2522,13 @@ function escapePathDelimiters(segment) {
 
 /***/ }),
 
+/***/ "fwjB":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/Drawer");
+
+/***/ }),
+
 /***/ "g/15":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2413,6 +2775,13 @@ module.exports = require("react-redux");
 
 /***/ }),
 
+/***/ "hNgU":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/People");
+
+/***/ }),
+
 /***/ "hS4m":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2620,6 +2989,20 @@ function makePublicRouterInstance(router) {
 
 /***/ }),
 
+/***/ "oYqQ":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/List");
+
+/***/ }),
+
+/***/ "u9rY":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/ListItem");
+
+/***/ }),
+
 /***/ "wkBG":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2629,10 +3012,31 @@ exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denorm
 
 /***/ }),
 
+/***/ "x/Zf":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/Layers");
+
+/***/ }),
+
+/***/ "x5Hn":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/Menu");
+
+/***/ }),
+
 /***/ "xnum":
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "y3yp":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/icons-material/ChevronLeft");
 
 /***/ }),
 

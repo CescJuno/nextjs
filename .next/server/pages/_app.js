@@ -100,6 +100,13 @@ module.exports = require("@reduxjs/toolkit");
 
 /***/ }),
 
+/***/ "0HQ6":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/styles");
+
+/***/ }),
+
 /***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -122,10 +129,24 @@ module.exports = require("lodash/fp");
 
 /***/ }),
 
+/***/ "Kps4":
+/***/ (function(module, exports) {
+
+module.exports = require("@emotion/react");
+
+/***/ }),
+
 /***/ "MQhX":
 /***/ (function(module, exports) {
 
 module.exports = require("react-i18next");
+
+/***/ }),
+
+/***/ "NPW5":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/CssBaseline");
 
 /***/ }),
 
@@ -265,6 +286,48 @@ external_i18next_default.a.use(external_i18next_browser_languagedetector_default
   lng: "ko-KR"
 });
 /* harmony default export */ var i18n = (external_i18next_default.a);
+// EXTERNAL MODULE: external "@mui/material/styles"
+var styles_ = __webpack_require__("0HQ6");
+
+// EXTERNAL MODULE: external "@mui/material/CssBaseline"
+var CssBaseline_ = __webpack_require__("NPW5");
+var CssBaseline_default = /*#__PURE__*/__webpack_require__.n(CssBaseline_);
+
+// EXTERNAL MODULE: external "@emotion/react"
+var react_ = __webpack_require__("Kps4");
+
+// EXTERNAL MODULE: external "@mui/material/colors"
+var colors_ = __webpack_require__("zWBi");
+
+// CONCATENATED MODULE: ./theme/theme.tsx
+
+ // Create a theme instance.
+
+const theme = Object(styles_["createTheme"])({
+  palette: {
+    primary: {
+      main: '#556cd6'
+    },
+    secondary: {
+      main: '#19857b'
+    },
+    error: {
+      main: colors_["red"].A400
+    }
+  }
+});
+/* harmony default export */ var theme_theme = (theme);
+// EXTERNAL MODULE: external "@emotion/cache"
+var cache_ = __webpack_require__("mlFk");
+var cache_default = /*#__PURE__*/__webpack_require__.n(cache_);
+
+// CONCATENATED MODULE: ./theme/createEmotionCache.tsx
+
+function createEmotionCache() {
+  return cache_default()({
+    key: 'css'
+  });
+}
 // CONCATENATED MODULE: ./pages/_app.tsx
 
 var __jsx = external_react_default.a.createElement;
@@ -272,15 +335,29 @@ var __jsx = external_react_default.a.createElement;
 //import { Provider as AuthProvider } from "next-auth/client";
 
 
- //import Routes from "../routers";
 
-const MyApp = ({
-  Component,
-  pageProps
-}) => {
-  return __jsx(external_react_redux_["Provider"], {
+
+
+
+
+ //import Routes from "../routers";
+// Client-side cache, shared for the whole session of the user in the browser.
+
+const clientSideEmotionCache = createEmotionCache();
+
+const MyApp = props => {
+  const {
+    Component,
+    emotionCache = clientSideEmotionCache,
+    pageProps
+  } = props;
+  return __jsx(react_["CacheProvider"], {
+    value: emotionCache
+  }, __jsx(styles_["ThemeProvider"], {
+    theme: theme_theme
+  }, __jsx(CssBaseline_default.a, null), __jsx(external_react_redux_["Provider"], {
     store: store_store
-  }, __jsx(Component, pageProps));
+  }, __jsx(Component, pageProps))));
 };
 
 /* harmony default export */ var _app = __webpack_exports__["default"] = (MyApp);
@@ -399,10 +476,24 @@ module.exports = require("react-redux-loading-bar");
 
 /***/ }),
 
+/***/ "mlFk":
+/***/ (function(module, exports) {
+
+module.exports = require("@emotion/cache");
+
+/***/ }),
+
 /***/ "rKB8":
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
+
+/***/ }),
+
+/***/ "zWBi":
+/***/ (function(module, exports) {
+
+module.exports = require("@mui/material/colors");
 
 /***/ }),
 
