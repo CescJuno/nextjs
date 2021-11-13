@@ -8,7 +8,7 @@ function Profile() {
   return (
     <>
       <Layout>
-        <Head>
+        <Head> 
           <title>Profile</title>
         </Head>
         <Container>Hello, my name is {router.query.name}. I use next.js</Container>

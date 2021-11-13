@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <>
       <Meta />
       <Header />
-      <section className="min-h-screen">
+      <section >
         <main>{children}</main>
       </section>
       <Footer />

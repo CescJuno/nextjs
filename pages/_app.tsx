@@ -12,7 +12,6 @@ import createEmotionCache from '../theme/createEmotionCache';
 //import Routes from "../routers";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
-
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
@@ -23,7 +22,7 @@ const MyApp = (props: MyAppProps) => {
       <ThemeProvider theme={theme}>
       <CssBaseline />
       <Provider store={store}>
-        <Component {...pageProps} />
+        <Component {...pageProps} /> 
       </Provider>
       </ThemeProvider>
     </CacheProvider>

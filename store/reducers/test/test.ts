@@ -10,7 +10,7 @@ export interface TestState {
 }
 
 const initialState: TestState = {
-  isLoading: false,
+  isLoading: false, 
   error: null,
   carts: {},
   totalPrice: 0,
@@ -65,3 +65,4 @@ export const incrementIfOdd = (price: number): AppThunk => (
   const currentTotalPrice = selectTotalPrice(getState());
   dispatch(setTotalPrice(price));
 };
+ 

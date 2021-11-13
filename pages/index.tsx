@@ -17,7 +17,7 @@ const Index = () => {
   const dispatch = useAppDispatch();
   
   return (
-    <Layout>
+    <Layout>z
       <Head>
         <title>Main</title>
       </Head>
